@@ -5,7 +5,7 @@ const mysql = require('mysql2');
 const connection = mysql.createConnection({
     host: "mysql-4646e87-munjanijay421-29a8.k.aivencloud.com",
     user: 'avnadmin',
-    password: 'AVNS_PrwXNVTb-QYXBiCtWdJ',
+    password: "AVNS_PrwXNVTb-QYXBiCtWdJ",
     database: 'defaultdb',
     port: '12023',
     connectTimeout: 10000,
