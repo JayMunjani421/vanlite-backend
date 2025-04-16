@@ -29,7 +29,7 @@ app.use("/api/bus", busRoutes);
 app.use("/api/attendence", attendenceRoutes);
 
 // Start Server
-app.listen(3000, () => console.log(`🚀 Server Started on Port 3000`));
+app.listen(12023, () => console.log(`🚀 Server Started on Port 3000`));
 
 
 // Start Server
