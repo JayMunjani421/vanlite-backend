@@ -7,8 +7,8 @@ const connection = mysql.createConnection({
     user: 'avnadmin',
     password: "AVNS_PrwXNVTb-QYXBiCtWdJ",
     database: 'defaultdb',
-    // port: '12023',
-    // connectTimeout: 10000,
+    port: '12023',
+    connectTimeout: 10000,
 });
 
 connection.connect(function (err) {
