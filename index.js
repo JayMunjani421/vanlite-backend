@@ -13,7 +13,7 @@ require('dotenv').config();
 
 const app = express();
 
-app.use(cors());  // Allow cross-origin requests
+// app.use(cors());  // Allow cross-origin requests
 app.use(cors({
     origin: ['http://localhost:3000', 'https://vanlite-frontend-admin.onrender.com'], // allow dev + prod
     credentials: true
