@@ -2,7 +2,7 @@ const connection = require("../config/connection");
 const path = require('path');
 const fs = require('fs');
 const jwt = require('jsonwebtoken');
-const BASE_URL = process.env.BASE_URL || 'http://localhost:8000/';
+const BASE_URL = process.env.BASE_URL || 'http://localhost:3000/';
 
 const getSingleSchool = async (req, resp) => {
     try {
