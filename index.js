@@ -13,7 +13,11 @@ require('dotenv').config();
 
 const app = express();
 
-app.use(cors());  // Allow cross-origin requests
+// app.use(cors());  // Allow cross-origin requests
+app.use(cors({
+    origin: ['http://localhost:3000', 'https://vanlite-frontend-admin.vercel.app/'], // allow dev + prod
+    credentials: true
+}));
 app.use(express.json());  // Support JSON requests
 app.use(express.urlencoded({ extended: true })); // Support URL-encoded form submissions
 
