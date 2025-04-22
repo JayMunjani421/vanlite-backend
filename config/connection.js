@@ -28,4 +28,4 @@ connection.connect(function (err) {
     console.log('Connected to MySQL database as ID', connection.threadId);
 });
 
-module.exports = connection.promise();
+module.exports = connection;
