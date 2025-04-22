@@ -10,7 +10,10 @@ const connection = mysql.createConnection({
     port: 3306,
     ssl: {
         rejectUnauthorized: true
-    }
+    },
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
     // connectTimeout: 10000,
 });
 
@@ -22,4 +25,4 @@ connection.connect(function (err) {
     console.log('Connected to MySQL database as ID', connection.threadId);
 });
 
-module.exports = connection;
+module.exports = connection.promise();
