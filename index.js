@@ -15,9 +15,10 @@ const app = express();
 
 // app.use(cors());  // Allow cross-origin requests
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://vanlite-frontend-admin.vercel.app/'], // allow dev + prod
+    origin: ['http://localhost:3000', 'https://vanlite-frontend-admin.vercel.app'], // allow dev + prod
     credentials: true
 }));
+
 app.use(express.json());  // Support JSON requests
 app.use(express.urlencoded({ extended: true })); // Support URL-encoded form submissions
 
@@ -66,8 +67,8 @@ app.listen(PORT, () => console.log(`🚀 Server Started on Port ${PORT}`));
 // app.use(bodyParser.urlencoded({ extended: true }));
 
 
-// const upload = multer(); 
-// app.use(upload.any()); 
+// const upload = multer();
+// app.use(upload.any());
 
 // app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
@@ -100,11 +101,11 @@ app.listen(PORT, () => console.log(`🚀 Server Started on Port ${PORT}`));
 // app.use(express.urlencoded({ extended: true })); // For x-www-form-urlencoded
 
 
-// app.use(bodyParser.json());                  
+// app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: false }));
 
 // // const upload = multer();
-// // app.use(upload.any()); 
+// // app.use(upload.any());
 // app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // app.use("/api/admin", adminRoutes);
