@@ -16,7 +16,10 @@ const connection = mysql.createConnection({
     user: 'avnadmin',
     password: "AVNS_PrwXNVTb-QYXBiCtWdJ",
     database: 'defaultdb',
-    port: '12023',
+    port: '3306',
+    ssl: {
+        rejectUnauthorized: true
+    },
     // connectTimeout: 10000,
 });
 
