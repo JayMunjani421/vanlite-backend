@@ -2,8 +2,8 @@ const connection = require("../config/connection");
 const path = require('path');
 const fs = require('fs');
 const jwt = require('jsonwebtoken');
-// const BASE_URL = process.env.BASE_URL || 'https://vanlite-backend.onrender.com/';
-const BASE_URL = 'https://vanlite-backend.onrender.com/';
+const BASE_URL = process.env.BASE_URL || 'https://vanlite-backend.onrender.com/';
+// const BASE_URL = 'https://vanlite-backend.onrender.com/';
 
 const getSingleSchool = async (req, resp) => {
     try {
