@@ -15,7 +15,7 @@ const app = express();
 
 // app.use(cors());  // Allow cross-origin requests
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://vanlite-frontend-admin.vercel.app','https://vanlite-frontend-school.vercel.app'], // allow dev + prod
+    origin: ['http://localhost:3000', 'https://vanlite-frontend-admin.vercel.app','https://vanlite-frontend-school.vercel.app','https://vanlite-frontend-bus.vercel.app'], // allow dev + prod
     credentials: true
 }));
 
