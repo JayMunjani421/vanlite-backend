@@ -50,7 +50,7 @@ const insertBus = async (req, resp) => {
             function (error, results, fields) {
                 if (error) {
                     console.error("DB Error:", error);
-                    return resp.status(500).json({ "status": false, "message": "Database query failed" });
+                    return resp.status(500).json({ "status": false, "message": error });
                 }
                 return resp.status(200).json({ "status": true, "message": "Data inserted successfully" });
             }
