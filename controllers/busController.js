@@ -152,7 +152,6 @@ const loginBus = async (req, resp) => {
     }
 };
 
-
 module.exports = {
     getSingleBus,
     getAllBus,

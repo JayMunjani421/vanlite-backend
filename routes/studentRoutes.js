@@ -12,5 +12,4 @@ studentRoutes.delete("/deletedata/:student_id",deleteStudent);
 studentRoutes.post("/viewstudentbybus", getStudentsByBusId);
 studentRoutes.post("/loginstudent", upload.none(), loginStudent);
 
-
 module.exports = studentRoutes;

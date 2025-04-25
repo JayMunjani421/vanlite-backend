@@ -19,31 +19,4 @@ const checkSchoolExistence = (req, resp, next) => {
     });
 };
 
-// const validateSchoolData = (req, resp, next) => {
-//     console.log("Request Body Data:::", req.body);
-//     const { school_name, school_address, school_email, school_password, start_date, school_manager_name, mobile_number } = req.body;
-//      // Log the full request body
-//     console.log("Request File Data:", req.file); // Log the file data
-//     // Check if all required fields are provided
-//     if (
-//         !school_name ||
-//         !school_address ||
-//         !school_email ||
-//         !school_password ||
-//         !start_date ||
-//         !school_manager_name ||
-//         !mobile_number
-//     ) {
-//         return resp.status(400).json({ "status": false, "message": "All Fields are required....." });
-//     }
-
-//     const today = new Date().toISOString().split('T')[0];
-//     // Check if the start date is in the future
-//     if (start_date < today) {
-//         return resp.status(400).json({ "status": false, "message": "Start date cannot be in the past" });
-//     }
-
-//     next(); // If everything is fine, proceed to next middleware (multer)
-// };
-
 module.exports = { checkSchoolExistence };

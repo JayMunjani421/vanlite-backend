@@ -1,7 +1,6 @@
 const connection = require("../config/connection");
 const jwt = require('jsonwebtoken');
 
-
 const getSingleStudent = async (req, resp) => {
     try {
         const student_id = req.params.student_id;
@@ -103,7 +102,7 @@ const deleteStudent = async (req, resp) => {
     } catch (error) {
         return resp.status(301).json({ "status": false, "message": error.message });
     }
-}
+};
 
 const getStudentsByBusId = async (req, resp) => {
     try {

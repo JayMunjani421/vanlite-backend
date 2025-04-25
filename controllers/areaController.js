@@ -1,7 +1,5 @@
 const connection = require("../config/connection");
 
-
-
 const getSingleArea = async (req, resp) => {
     try {
         const area_id = req.params.area_id;
@@ -60,43 +58,6 @@ const insertArea = async (req, resp) => {
     }
 };
 
-
-// const insertArea = async (req, resp) => {
-//     try {
-//         console.log("🔹 Route /insertdata hit");
-//         console.log("🔹 Received request at /insertdata");
-//         console.log("🔹 Headers:", req.headers);
-//         console.log("🔹 Body:", req.body); // 🔥 Check if data is received
-//         console.log("🔹 Files:", req.files); // 🔥 Should be undefined
-
-//         const { area_name, school_id } = req.body;
-
-//         if (!area_name || !school_id) {
-//             console.error("❌ Missing area_name or school_id");
-//             return resp.status(400).json({ "status": false, "message": "area_name and school_id are required" });
-//         }
-
-//         // ✅ Insert Data into Database
-//         connection.query(
-//             "INSERT INTO tbl_area (area_name, school_id) VALUES (?, ?)",
-//             [area_name, school_id],
-//             function (error, results, fields) {
-//                 if (error) {
-//                     console.error("❌ Database error:", error);
-//                     return resp.status(500).json({ "status": false, "message": "Database query failed" });
-//                 }
-//                 console.log("✅ Data inserted successfully");
-//                 return resp.status(200).json({ "status": true, "message": "Data inserted successfully" });
-//             }
-//         );
-//     } catch (error) {
-//         console.error("❌ Server error:", error);
-//         return resp.status(500).json({ "status": false, "message": "Server error" });
-//     }
-// };
-
-
-
 const deleteArea = async (req, resp) => {
     try {
         const area_id = req.params.area_id;
@@ -137,7 +98,6 @@ const updateArea = async (req, resp) => {
         return resp.status(500).json({ "status": false, "message": error.message });
     }
 };
-
 
 module.exports = {
     getSingleArea,

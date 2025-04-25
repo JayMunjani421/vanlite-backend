@@ -3,7 +3,6 @@ const path = require('path');
 const fs = require('fs');
 const jwt = require('jsonwebtoken');
 const BASE_URL = process.env.BASE_URL || 'https://vanlite-backend.onrender.com/';
-// const BASE_URL = 'https://vanlite-backend.onrender.com/';
 
 const getSingleSchool = async (req, resp) => {
     try {
@@ -38,33 +37,6 @@ const getAllSchool = async (req, resp) => {
         return resp.status(301).json({ "status": false, "message": error.message });
     }
 };
-
-// const insertSchool = async (req, resp) => {
-//     try {
-//         if (!req.file) {
-//             return resp.status(400).json({ "status": false, message: "No file uploaded" });
-//         }
-//         else if (req.file.length > 1) {
-//             return resp.status(400).json({ "status": false, message: "Multiple files not allowed" });
-//         }
-//         else {
-//             var filename = req.file.filename;
-//             //var originalname = req.file.originalname;
-//             const { school_name, school_address, school_email, school_password, start_date, end_date, school_manager_name, mobile_number } = req.body;
-//             const imageUrl = `${BASE_URL}uploads/${filename}`;
-//             const is_active = "no";
-//             connection.query("insert into tbl_school (school_name, school_address, school_email, school_password, start_date, end_date, school_logo, school_manager_name, mobile_number, is_active) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [school_name, school_address, school_email, school_password, start_date, end_date, imageUrl, school_manager_name, mobile_number, is_active], function (error, results, fields) {
-//                 if (error) {
-//                     return resp.status(301).json({ "status": false, "message": error.message });
-//                 }
-//                 return resp.status(200).json({ "status": true, "message": "Data inserted successfully" });
-//             });
-//         }
-//     } catch (error) {
-//         return resp.status(301).json({ "status": false, "message": error.message });
-//     }
-
-// };
 
 const insertSchool = async (req, resp) => {
     try {
@@ -112,7 +84,6 @@ const insertSchool = async (req, resp) => {
         return resp.status(500).json({ "status": false, "message": "Server error" });
     }
 };
-
 
 const deleteSchool = async (req, resp) => {
     try {
@@ -164,8 +135,7 @@ const deleteSchool = async (req, resp) => {
     } catch (error) {
         return resp.status(301).json({ "status": false, "message": error.message });
     }
-
-}
+};
 
 const updateSchool = async (req, resp) => {
     try {
@@ -270,8 +240,6 @@ const loginSchool = async (req, resp) => {
         return resp.status(400).json({ status: false, message: error.message });
     }
 };
-
-
 
 module.exports = {
     getAllSchool,
